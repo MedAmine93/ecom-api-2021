@@ -10,24 +10,10 @@ app.post("/register", (req, res) => {
     res.send("hello registre")
 })
 
-//delete
-app.delete("/supp", (req, res) => {
-
-    let data = req.body
-    console.log(data)
-    res.send("hello registre")
+app.get("/product/:id", (req, res) => {
+    let productid = req.params.id
+    console.log('productid :' + productid)
+    res.send("hello product")
 })
-
-//put
-
-
-
-
-//get
-
-
-
-
-
 
 module.exports = app
